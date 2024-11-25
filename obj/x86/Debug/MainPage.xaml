@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="StarWars.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StarWars"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBox x:ConnectionId='8' x:Name="SearchBox" PlaceholderText="Search by character or planet name" Width="300" Margin="0,0,10,0"/>
+            <Button x:ConnectionId='9' Content="Search"                           />
+        </StackPanel>
+
+        <ListView x:ConnectionId='2' x:Name="CharacterListView" Grid.Row="1" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding HomePlanet.Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <Button x:ConnectionId='3' Content="Save XML"                             Margin="0,0,10,0"/>
+            <Button x:ConnectionId='4' Content="Save JSON"                              Margin="0,0,10,0"/>
+            <Button x:ConnectionId='5' Content="Load XML"                             Margin="0,0,10,0"/>
+            <Button x:ConnectionId='6' Content="Load JSON"                             />
+        </StackPanel>
+    </Grid>
+</Page>
+
