@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace StarWars.Services
 {
@@ -66,6 +65,7 @@ namespace StarWars.Services
             }
             return null;
         }
+
         private async Task<List<Vehicle>> GetVehiclesAsync(JArray vehicleUrls)
         {
             var vehicles = new List<Vehicle>();
@@ -112,3 +112,4 @@ namespace StarWars.Services
         }
     }
 }
+

@@ -41,3 +41,4 @@ namespace StarWars.Models
         public string StarshipClass { get; set; }
     }
 }
+

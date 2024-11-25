@@ -15,28 +15,59 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-            <TextBox x:ConnectionId='8' x:Name="SearchBox" PlaceholderText="Search by character or planet name" Width="300" Margin="0,0,10,0"/>
-            <Button x:ConnectionId='9' Content="Search"                           />
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/space_background.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <StackPanel Grid.Row="0" Margin="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/star_wars_logo.png" Height="80" Margin="0,0,20,0"/>
+                <TextBlock Grid.Column="1" Text="Star Wars" FontSize="48" FontWeight="Bold" Foreground="Yellow" VerticalAlignment="Center"/>
+            </Grid>
+            <TextBlock Text="Character Database" FontSize="24" FontWeight="Bold" Foreground="Yellow" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:ConnectionId='8' x:Name="SearchBox" PlaceholderText="Search by character or planet name" Margin="0,0,10,0"/>
+                <Button x:ConnectionId='9' Grid.Column="1" x:Name="ClearSearchButton" Content="&#xE10A;" FontFamily="Segoe MDL2 Assets"                                 Margin="0,0,10,0"/>
+                <Button x:ConnectionId='10' Grid.Column="2" Content="Search"                            Style="{StaticResource AccentButtonStyle}"/>
+            </Grid>
         </StackPanel>
 
-        <ListView x:ConnectionId='2' x:Name="CharacterListView" Grid.Row="1" Margin="10">
+        <ListView x:ConnectionId='2' x:Name="CharacterListView" Grid.Row="1" Margin="20" 
+                  Background="#80000000" BorderBrush="Gray" BorderThickness="1"
+                  IsItemClickEnabled="True"                                        >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding HomePlanet.Name}"/>
-                    </StackPanel>
+                    <Grid Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Assets/character_icon.png" Width="50" Height="50" Margin="0,0,10,0"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Text="{Binding HomePlanet.Name}" Foreground="LightGray"/>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
-            <Button x:ConnectionId='3' Content="Save XML"                             Margin="0,0,10,0"/>
-            <Button x:ConnectionId='4' Content="Save JSON"                              Margin="0,0,10,0"/>
-            <Button x:ConnectionId='5' Content="Load XML"                             Margin="0,0,10,0"/>
-            <Button x:ConnectionId='6' Content="Load JSON"                             />
-        </StackPanel>
+        <CommandBar Grid.Row="2" Background="#80000000">
+            <AppBarButton x:ConnectionId='3' Icon="Save" Label="Save XML"                            />
+            <AppBarButton x:ConnectionId='4' Icon="Save" Label="Save JSON"                             />
+            <AppBarButton x:ConnectionId='5' Icon="OpenFile" Label="Load XML"                            />
+            <AppBarButton x:ConnectionId='6' Icon="OpenFile" Label="Load JSON"                             />
+        </CommandBar>
     </Grid>
 </Page>
+
 

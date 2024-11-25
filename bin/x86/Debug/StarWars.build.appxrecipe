@@ -73,6 +73,9 @@
     <AppxPackagedFile Include="C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\bin\x86\Debug\CharacterDetailsControl.xbf">
+      <PackagePath>CharacterDetailsControl.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

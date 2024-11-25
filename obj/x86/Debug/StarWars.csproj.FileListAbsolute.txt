@@ -44,3 +44,8 @@ C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x
 C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_638441383520000000.json
+C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\CharacterDetailsControl.g.i.cs
+C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\CharacterDetailsControl.g.cs
+C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\CharacterDetailsControl.xaml
+C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\obj\x86\Debug\CharacterDetailsControl.xbf
+C:\Users\DarioChin\OneDrive - ITS Angelo Rizzoli\Desktop\StarWars\StarWars\bin\x86\Debug\CharacterDetailsControl.xbf
