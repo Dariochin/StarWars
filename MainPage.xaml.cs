@@ -163,5 +163,10 @@ namespace StarWars
             };
             timer.Start();
         }
+
+        private void CharacterListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
